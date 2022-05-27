@@ -17,11 +17,11 @@
         android:text="Sumsung Health"
         android:textSize="40dp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-
-        app:layout_constraintBottom_toTopOf="@+id/Bottom_part"
+        app:layout_constraintBottom_toTopOf="@+id/wrap_steps"
 
         />
 
@@ -32,35 +32,36 @@
             android:text="соединено с Gear S3 в 01:53"
             android:textSize="16dp"
             android:layout_marginBottom="40dp"
+            android:textColor="@color/black"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/big_text"
             app:layout_constraintBottom_toTopOf="@+id/thr_dots"
         />
 
-    <ImageView
-        android:id="@+id/thr_dots"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_margin="15dp"
-        android:src="@drawable/ThrDots"
-        app:layout_constraintTop_toBottomOf="@id/small_text"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/Bottom_part"
-        app:layout_constraintHorizontal_bias="1"
+        <ImageView
+            android:id="@+id/thr_dots"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_margin="15dp"
+            android:src="@drawable/ThrDots"
+            app:layout_constraintTop_toBottomOf="@id/small_text"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/wrap_steps"
+            app:layout_constraintHorizontal_bias="1"
 
         />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/Bottom_part"
-        android:layout_width="0dp"
-        android:layout_height="125dp"
-        android:layout_margin="10dp"
-        android:background="#8DA399"
-        app:layout_constraintTop_toBottomOf="@+id/thr_dots"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+            android:id="@+id/wrap_steps"
+            android:layout_width="0dp"
+            android:layout_height="125dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/corner"
+            app:layout_constraintTop_toBottomOf="@+id/thr_dots"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
 
         <TextView
             android:id="@+id/steps"
@@ -74,7 +75,6 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-
 
             />
 
@@ -114,10 +114,175 @@
             android:textSize="10dp"
             />
 
+        <TextView
+            android:id="@+id/bar_Percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toTopOf="@id/Progress_Bar"
+            app:layout_constraintLeft_toLeftOf="@id/Progress_Bar"
+            app:layout_constraintVertical_bias="0.25"
+            />
+        <ProgressBar
+            android:id="@+id/Progress_Bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:progress="3"
+            android:layout_marginLeft="150dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/progressR"
 
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/steps_goal"
+            app:layout_constraintTop_toTopOf="parent"
+
+
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/wrap_EXE"
+        android:layout_width="0dp"
+        android:layout_height="125dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/corner"
+        android:padding="20dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wrap_steps"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/exercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Упражнения"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/journal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Посмотреть журнал"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/exercise_1"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:paddingLeft="30dp"
+            android:src="@drawable/run"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/exercise_2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/exercise_2"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/man"
+            app:layout_constraintBottom_toBottomOf="@+id/exercise_1"
+            app:layout_constraintEnd_toStartOf="@+id/exercise_3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/exercise_1"
+            app:layout_constraintTop_toTopOf="@+id/exercise_1" />
+
+        <ImageView
+            android:id="@+id/exercise_3"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:src="@drawable/velo"
+            app:layout_constraintBottom_toBottomOf="@+id/exercise_2"
+            app:layout_constraintEnd_toStartOf="@+id/exercise_4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/exercise_2"
+            app:layout_constraintTop_toTopOf="@+id/exercise_2" />
+
+        <ImageView
+            android:id="@+id/exercise_4"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:paddingRight="30dp"
+            android:src="@drawable/hamburger"
+            app:layout_constraintBottom_toBottomOf="@+id/exercise_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1.5"
+            app:layout_constraintStart_toEndOf="@+id/exercise_3"
+            app:layout_constraintTop_toTopOf="@+id/exercise_3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/wrap_slip"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        tools:context=".MainActivity"
+        android:background="@drawable/corner"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wrap_EXE"
+        >
+
+
+    <TextView
+        android:id="@+id/text_sleep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вы спали?"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/text_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/sleep_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8 ч. 30 мин. | 02:10 - 10:40"
+        android:textSize="14dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_sleep"
+
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
