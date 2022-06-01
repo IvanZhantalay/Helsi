@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/Top_part"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey"
+    android:padding="@dimen/main_padding"
     tools:context=".MainActivity">
 
     <TextView
@@ -16,23 +15,22 @@
         android:layout_height="wrap_content"
         android:text="@string/big_logo"
         android:textColor="@color/black"
-        android:textSize="40dp"
+        android:textSize="@dimen/Extra_big_header_text_size"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/wrap_steps"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-
         />
 
     <TextView
         android:id="@+id/small_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="@dimen/main_text_marginBottom"
         android:text="@string/connected_to"
         android:textColor="@color/black"
-        android:textSize="16dp"
+        android:textSize="@dimen/Small_header_text_size"
         app:layout_constraintBottom_toTopOf="@+id/thr_dots"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -42,26 +40,25 @@
         android:id="@+id/thr_dots"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
-        android:layout_margin="15dp"
+        android:layout_margin="20dp"
         android:src="@drawable/ThrDots"
         app:layout_constraintBottom_toTopOf="@+id/wrap_steps"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/small_text"
-
-        />
+        app:layout_constraintTop_toBottomOf="@id/small_text" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/wrap_steps"
         android:layout_width="0dp"
-        android:layout_height="125dp"
-        android:layout_margin="10dp"
+        android:layout_height="@dimen/inner_container_height"
         android:background="@drawable/corner"
-        android:padding="20dp"
+        android:padding="@dimen/containner_padding"
+        android:layout_marginTop="@dimen/containner_marginTop"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/thr_dots">
+        app:layout_constraintTop_toBottomOf="@+id/thr_dots"
+        app:layout_constraintBottom_toTopOf="@+id/steps"
+        >
+
 
         <TextView
             android:id="@+id/steps"
@@ -69,7 +66,7 @@
             android:layout_height="wrap_content"
             android:text="@string/steps"
             android:textColor="@color/black"
-            android:textSize="18dp"
+            android:textSize="@dimen/Medium_header_text_size"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/steps_value"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -84,7 +81,7 @@
             android:layout_height="wrap_content"
             android:text="@string/steps_value"
             android:textColor="@color/black"
-            android:textSize="24dp"
+            android:textSize="@dimen/Big_header_text_size"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/steps_all"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -107,7 +104,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/steps_all"
-            android:textSize="10dp"
+            android:textSize="@dimen/Extra_small_header_text_size"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -119,7 +116,7 @@
             android:layout_height="wrap_content"
             android:text="@string/percentage"
             android:textColor="@color/black"
-            android:textSize="10dp"
+            android:textSize="@dimen/Extra_small_header_text_size"
             app:layout_constraintBottom_toTopOf="@id/Progress_Bar"
             app:layout_constraintLeft_toLeftOf="@id/Progress_Bar"
             app:layout_constraintVertical_bias="0.25" />
@@ -129,29 +126,23 @@
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="150dp"
+            android:layout_marginLeft="@dimen/progress_bar_marginLeft"
             android:background="@drawable/progressR"
-
             android:progress="3"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/steps_goal"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-
-
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/wrap_EXE"
         android:layout_width="0dp"
-        android:layout_height="125dp"
-        android:layout_margin="10dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="@dimen/inner_container_height"
+        android:layout_marginTop="@dimen/containner_marginTop"
         android:background="@drawable/corner"
-        android:padding="20dp"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:padding="@dimen/containner_padding"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/wrap_steps"
@@ -163,17 +154,19 @@
             android:layout_height="wrap_content"
             android:text="@string/exercise"
             android:textColor="@color/black"
-            android:textSize="16dp"
+            android:textSize="@dimen/Small_header_text_size"
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
 
         <TextView
             android:id="@+id/journal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/view_log"
-            android:textSize="16dp"
+            android:textSize="@dimen/Small_header_text_size"
             android:textStyle="bold"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -234,10 +227,10 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/wrap_slip"
         android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_margin="10dp"
+        android:layout_height="@dimen/inner_container_height_last"
+        android:layout_marginTop="@dimen/containner_marginTop"
         android:background="@drawable/corner"
-        android:padding="20dp"
+        android:padding="@dimen/containner_padding"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/wrap_EXE"
@@ -250,8 +243,7 @@
             android:layout_height="wrap_content"
             android:text="@string/do_slep"
             android:textColor="@color/black"
-            android:textSize="16dp"
-            android:textStyle="bold"
+            android:textSize="@dimen/Small_header_text_size"            android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -261,7 +253,7 @@
             android:layout_height="wrap_content"
             android:text="@string/ok"
             android:textColor="@color/black"
-            android:textSize="16dp"
+            android:textSize="@dimen/Small_header_text_size"
             android:textStyle="bold"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -270,13 +262,12 @@
             android:id="@+id/sleep_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/text_marginTop"
             android:text="@string/slep_time"
-            android:textSize="14dp"
+            android:textSize="@dimen/Extra_small_header_text_size"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_sleep"
-            />
+            app:layout_constraintTop_toBottomOf="@id/text_sleep" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
