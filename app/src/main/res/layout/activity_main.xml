@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/Top_part"
@@ -19,11 +18,9 @@
         android:textSize="@dimen/Extra_big_header_text_size"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/steps_containner"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" 
-        />
-    
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/second_title"
@@ -34,8 +31,8 @@
         android:textColor="@color/black"
         android:textSize="@dimen/Small_header_text_size"
         app:layout_constraintBottom_toTopOf="@+id/three_dots_menu"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/maine_title_logo" />
 
     <ImageView
@@ -56,8 +53,8 @@
         android:background="@drawable/corner"
         android:padding="@dimen/containner_padding"
         app:layout_constraintBottom_toTopOf="@+id/steps_title"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/three_dots_menu">
 
         <TextView
@@ -70,9 +67,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/steps_value"
             app:layout_constraintStart_toStartOf="parent"
-
             app:layout_constraintTop_toTopOf="parent"
-
             />
 
         <TextView
@@ -86,7 +81,6 @@
             app:layout_constraintBottom_toTopOf="@id/steps_time"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/steps_title"
-
             />
 
         <TextView
@@ -106,8 +100,8 @@
             android:text="@string/steps_all"
             android:textSize="@dimen/Extra_small_header_text_size"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/steps_value" />
 
         <TextView
@@ -142,8 +136,8 @@
         android:layout_marginTop="@dimen/containner_marginTop"
         android:background="@drawable/corner"
         android:padding="@dimen/containner_padding"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/steps_containner"
         tools:context=".MainActivity">
 
@@ -165,7 +159,6 @@
             android:text="@string/view_log"
             android:textSize="@dimen/Small_header_text_size"
             android:textStyle="bold"
-
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -198,9 +191,8 @@
             android:background="@drawable/run"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="1:1"
-            app:layout_constraintStart_toEndOf="@id/guid_right"
             app:layout_constraintEnd_toStartOf="@id/man_img"
-            />
+            app:layout_constraintStart_toEndOf="@id/guid_right" />
 
         <ImageButton
             android:id="@+id/man_img"
@@ -209,10 +201,9 @@
             android:background="@drawable/man"
             app:layout_constraintBottom_toBottomOf="@id/run_img"
             app:layout_constraintDimensionRatio="1:1"
-            app:layout_constraintStart_toEndOf="@id/velo_img"
             app:layout_constraintEnd_toStartOf="@id/run_img"
-            app:layout_constraintTop_toTopOf="@id/run_img"
-            />
+            app:layout_constraintStart_toEndOf="@id/velo_img"
+            app:layout_constraintTop_toTopOf="@id/run_img" />
 
         <ImageButton
             android:id="@+id/velo_img"
@@ -221,10 +212,9 @@
             android:background="@drawable/velo"
             app:layout_constraintBottom_toBottomOf="@id/run_img"
             app:layout_constraintDimensionRatio="1:1"
-            app:layout_constraintStart_toEndOf="@id/man_img"
             app:layout_constraintEnd_toStartOf="@id/hamburger_img"
-            app:layout_constraintTop_toTopOf="@id/man_img"
-            />
+            app:layout_constraintStart_toEndOf="@id/man_img"
+            app:layout_constraintTop_toTopOf="@id/man_img" />
 
         <ImageButton
             android:id="@+id/hamburger_img"
@@ -233,24 +223,23 @@
             android:background="@drawable/hamburger"
             app:layout_constraintBottom_toBottomOf="@id/run_img"
             app:layout_constraintDimensionRatio="1:1"
-            app:layout_constraintStart_toEndOf="@id/velo_img"
             app:layout_constraintEnd_toStartOf="@id/guid_left"
-            app:layout_constraintTop_toTopOf="@id/velo_img"
-            />
+            app:layout_constraintStart_toEndOf="@id/velo_img"
+            app:layout_constraintTop_toTopOf="@id/velo_img" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-       <androidx.constraintlayout.widget.ConstraintLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/slip_container"
         android:layout_width="0dp"
         android:layout_height="@dimen/inner_container_height_last"
         android:layout_marginTop="@dimen/containner_marginTop"
         android:background="@drawable/corner"
         android:padding="@dimen/containner_padding"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/exercise_container"
         tools:context=".MainActivity">
-
 
         <TextView
             android:id="@+id/sleep_title"

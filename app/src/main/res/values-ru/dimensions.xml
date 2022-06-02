@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //Text Size
+    <dimen name="Extra_big_header_text_size">40dp</dimen>
+    <dimen name="Big_header_text_size">24dp</dimen>
+    <dimen name="Medium_header_text_size">18dp</dimen>
+    <dimen name="Small_header_text_size">16dp</dimen>
+    <dimen name="Extra_small_header_text_size">12dp</dimen>
+
+    //Paddings
+    <dimen name="containner_padding">20dp</dimen>
+    <dimen name="main_padding">20dp</dimen>
+
+    //Margins
+    <dimen name="main_text_marginBottom">40dp</dimen>
+    <dimen name="containner_marginTop">10dp</dimen>
+    <dimen name="progress_bar_marginLeft">150dp</dimen>
+    <dimen name="text_marginTop">20dp</dimen>
+
+    //Container  height
+    <dimen name="inner_container_height">125dp</dimen>
+    <dimen name="inner_container_height_last">100dp</dimen>
+
+    //Progress_bar
+    <dimen name="round_corner_background">16dp</dimen>
+    <dimen name="progress_bar_height">10dp</dimen>
+
+    //three_dots_menu_size
+    <dimen name="three_dots_menu_height">20dp</dimen>
+    <dimen name="three_dots_menu_margin">20dp</dimen>
+
+    //img_buttons
+    <dimen name="exercise_button_height">55dp</dimen>
+
+
+
+</resources>
