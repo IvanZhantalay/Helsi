@@ -29,11 +29,7 @@
     <dimen name="three_dots_menu_height">20dp</dimen>
     <dimen name="three_dots_menu_margin">20dp</dimen>
 
-    <dimen name="exercise_button_height">55dp</dimen>
-    margin
-
-
-
+    //img_buttons
     <dimen name="exercise_button_height">55dp</dimen>
 
 
