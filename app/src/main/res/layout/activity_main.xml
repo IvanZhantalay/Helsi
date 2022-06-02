@@ -56,13 +56,13 @@
         android:layout_marginTop="@dimen/containner_marginTop"
         android:background="@drawable/corner"
         android:padding="@dimen/containner_padding"
-        app:layout_constraintBottom_toTopOf="@+id/steps"
+        app:layout_constraintBottom_toTopOf="@+id/steps_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/three_dots_menu">
 
         <TextView
-            android:id="@+id/steps"
+            android:id="@+id/steps_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/steps"
@@ -84,9 +84,9 @@
             android:textColor="@color/black"
             android:textSize="@dimen/Big_header_text_size"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/steps_all"
+            app:layout_constraintBottom_toTopOf="@id/steps_time"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/steps"
+            app:layout_constraintTop_toBottomOf="@id/steps_title"
 
             />
 
@@ -96,12 +96,12 @@
             android:layout_height="wrap_content"
             android:text="@string/steps_goal"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@id/steps_all"
+            app:layout_constraintBottom_toTopOf="@id/steps_time"
             app:layout_constraintLeft_toRightOf="@id/steps_value"
             app:layout_constraintTop_toTopOf="@id/steps_value" />
 
         <TextView
-            android:id="@+id/steps_all"
+            android:id="@+id/steps_time"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/steps_all"
@@ -149,7 +149,7 @@
         tools:context=".MainActivity">
 
         <TextView
-            android:id="@+id/exercise"
+            android:id="@+id/exercise_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/exercise"
@@ -162,7 +162,7 @@
             />
 
         <TextView
-            android:id="@+id/journal"
+            android:id="@+id/exercise_logs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/view_log"
@@ -238,7 +238,7 @@
 
 
         <TextView
-            android:id="@+id/text_sleep"
+            android:id="@+id/sleep_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/do_slep"
@@ -249,7 +249,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/text_ok"
+            android:id="@+id/sleep_ok"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ok"
@@ -268,7 +268,7 @@
             android:textSize="@dimen/Extra_small_header_text_size"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_sleep" />
+            app:layout_constraintTop_toBottomOf="@id/sleep_title" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
