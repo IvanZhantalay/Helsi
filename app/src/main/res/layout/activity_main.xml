@@ -22,7 +22,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" 
-
         />
     
 
@@ -42,8 +41,8 @@
     <ImageView
         android:id="@+id/three_dots_menu"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_margin="20dp"
+        android:layout_height="@dimen/three_dots_menu_height"
+        android:layout_margin="@dimen/three_dots_menu_margin"
         android:src="@drawable/ThrDots"
         app:layout_constraintBottom_toTopOf="@+id/steps_containner"
         app:layout_constraintEnd_toEndOf="parent"
@@ -158,7 +157,6 @@
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-
             />
 
         <TextView
@@ -168,63 +166,81 @@
             android:text="@string/view_log"
             android:textSize="@dimen/Small_header_text_size"
             android:textStyle="bold"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guid_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_percent="0.15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guid_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_percent="0.85"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
             android:id="@+id/run_img"
             android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:paddingLeft="30dp"
-            android:src="@drawable/run"
+            android:layout_height="@dimen/exercise_button_height"
+            android:background="@drawable/run"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/man_img"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_weight="1.5"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toRightOf="@id/guid_right"
+            app:layout_constraintRight_toLeftOf="@id/man_img"
+            />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/man_img"
             android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:layout_marginRight="5dp"
-            android:src="@drawable/man"
-            app:layout_constraintBottom_toBottomOf="@+id/run_img"
-            app:layout_constraintEnd_toStartOf="@+id/velo_img"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toEndOf="@+id/run_img"
-            app:layout_constraintTop_toTopOf="@+id/run_img" />
+            android:layout_height="@dimen/exercise_button_height"
+            android:background="@drawable/man"
+            app:layout_constraintBottom_toBottomOf="@id/run_img"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toRightOf="@id/velo_img"
+            app:layout_constraintRight_toLeftOf="@id/run_img"
+            app:layout_constraintTop_toTopOf="@id/run_img"
+            />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/velo_img"
             android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:src="@drawable/velo"
-            app:layout_constraintBottom_toBottomOf="@+id/run_img"
-            app:layout_constraintEnd_toStartOf="@+id/hamburger_img"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toEndOf="@+id/run_img"
-            app:layout_constraintTop_toTopOf="@+id/run_img" />
+            android:layout_height="@dimen/exercise_button_height"
+            android:background="@drawable/velo"
+            app:layout_constraintBottom_toBottomOf="@id/run_img"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toRightOf="@id/man_img"
+            app:layout_constraintRight_toLeftOf="@id/hamburger_img"
+            app:layout_constraintTop_toTopOf="@id/man_img"
+            />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/hamburger_img"
             android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:paddingRight="30dp"
-            android:src="@drawable/hamburger"
-            app:layout_constraintBottom_toBottomOf="@+id/run_img"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_weight="1.5"
-            app:layout_constraintStart_toEndOf="@+id/run_img"
-            app:layout_constraintTop_toTopOf="@+id/run_img" />
+            android:layout_height="@dimen/exercise_button_height"
+            android:background="@drawable/hamburger"
+            app:layout_constraintBottom_toBottomOf="@id/run_img"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toRightOf="@id/velo_img"
+            app:layout_constraintRight_toLeftOf="@id/guid_left"
+            app:layout_constraintTop_toTopOf="@id/velo_img"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+       <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/slip_container"
         android:layout_width="0dp"
         android:layout_height="@dimen/inner_container_height_last"

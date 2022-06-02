@@ -21,12 +21,21 @@
     <dimen name="inner_container_height">125dp</dimen>
     <dimen name="inner_container_height_last">100dp</dimen>
 
-
+    //Progress_bar
     <dimen name="round_corner_background">16dp</dimen>
     <dimen name="progress_bar_height">10dp</dimen>
 
-    //tbd
-    <dimen name="my_value">40dp</dimen>
+    //three_dots_menu_size
+    <dimen name="three_dots_menu_height">20dp</dimen>
+    <dimen name="three_dots_menu_margin">20dp</dimen>
+
+    <dimen name="exercise_button_height">55dp</dimen>
+    margin
+
+
+
+    <dimen name="exercise_button_height">55dp</dimen>
+
 
 
 </resources>
