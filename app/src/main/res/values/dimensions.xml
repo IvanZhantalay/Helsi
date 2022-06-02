@@ -21,8 +21,11 @@
     <dimen name="inner_container_height">125dp</dimen>
     <dimen name="inner_container_height_last">100dp</dimen>
 
+
+    <dimen name="round_corner_background">16dp</dimen>
+    <dimen name="progress_bar_height">10dp</dimen>
+
     //tbd
-    <dimen name="my_value">40dp</dimen>
     <dimen name="my_value">40dp</dimen>
 
 

@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
 
-    <color name="grey">#F6F6F6</color>
-
-
+    <color name="grey_background">#F6F6F6</color>
+    <color name="background_color">#F5F5F5</color>
+    <color name="progress_bar">#21A667</color>
 </resources>

@@ -1,64 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/Top_part"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey"
+    android:background="@color/grey_background"
     android:padding="@dimen/main_padding"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/big_text"
+        android:id="@+id/maine_title_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/big_logo"
         android:textColor="@color/black"
         android:textSize="@dimen/Extra_big_header_text_size"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/wrap_steps"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/steps_containner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" 
+
         />
+    
 
     <TextView
-        android:id="@+id/small_text"
+        android:id="@+id/second_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/main_text_marginBottom"
         android:text="@string/connected_to"
         android:textColor="@color/black"
         android:textSize="@dimen/Small_header_text_size"
-        app:layout_constraintBottom_toTopOf="@+id/thr_dots"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/big_text" />
+        app:layout_constraintBottom_toTopOf="@+id/three_dots_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maine_title_logo" />
 
     <ImageView
-        android:id="@+id/thr_dots"
+        android:id="@+id/three_dots_menu"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
         android:layout_margin="20dp"
         android:src="@drawable/ThrDots"
-        app:layout_constraintBottom_toTopOf="@+id/wrap_steps"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/small_text" />
+        app:layout_constraintBottom_toTopOf="@+id/steps_containner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/second_title" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/wrap_steps"
+        android:id="@+id/steps_containner"
         android:layout_width="0dp"
         android:layout_height="@dimen/inner_container_height"
+        android:layout_marginTop="@dimen/containner_marginTop"
         android:background="@drawable/corner"
         android:padding="@dimen/containner_padding"
-        android:layout_marginTop="@dimen/containner_marginTop"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/thr_dots"
         app:layout_constraintBottom_toTopOf="@+id/steps"
-        >
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/three_dots_menu">
 
         <TextView
             android:id="@+id/steps"
@@ -69,8 +70,8 @@
             android:textSize="@dimen/Medium_header_text_size"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/steps_value"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
 
             />
@@ -84,7 +85,7 @@
             android:textSize="@dimen/Big_header_text_size"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/steps_all"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/steps"
 
             />
@@ -106,46 +107,45 @@
             android:text="@string/steps_all"
             android:textSize="@dimen/Extra_small_header_text_size"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/steps_value" />
 
         <TextView
-            android:id="@+id/bar_Percent"
+            android:id="@+id/progress_Bar_Percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/percentage"
             android:textColor="@color/black"
             android:textSize="@dimen/Extra_small_header_text_size"
-            app:layout_constraintBottom_toTopOf="@id/Progress_Bar"
-            app:layout_constraintLeft_toLeftOf="@id/Progress_Bar"
+            app:layout_constraintBottom_toTopOf="@id/progress_Bar"
+            app:layout_constraintStart_toStartOf="@id/progress_Bar"
             app:layout_constraintVertical_bias="0.25" />
 
         <ProgressBar
-            android:id="@+id/Progress_Bar"
+            android:id="@+id/progress_Bar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/progress_bar_height"
             android:layout_marginLeft="@dimen/progress_bar_marginLeft"
-            android:background="@drawable/progressR"
+            android:background="@drawable/progress_bar_line"
             android:progress="3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/steps_goal"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/wrap_EXE"
+        android:id="@+id/exercise_container"
         android:layout_width="0dp"
         android:layout_height="@dimen/inner_container_height"
         android:layout_marginTop="@dimen/containner_marginTop"
         android:background="@drawable/corner"
         android:padding="@dimen/containner_padding"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/wrap_steps"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/steps_containner"
         tools:context=".MainActivity">
 
         <TextView
@@ -156,7 +156,7 @@
             android:textColor="@color/black"
             android:textSize="@dimen/Small_header_text_size"
             android:textStyle="bold"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
 
             />
@@ -168,72 +168,72 @@
             android:text="@string/view_log"
             android:textSize="@dimen/Small_header_text_size"
             android:textStyle="bold"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/run"
+            android:id="@+id/run_img"
             android:layout_width="0dp"
             android:layout_height="55dp"
             android:paddingLeft="30dp"
             android:src="@drawable/run"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/man"
+            app:layout_constraintEnd_toStartOf="@+id/man_img"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_weight="1.5"
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
-            android:id="@+id/man"
+            android:id="@+id/man_img"
             android:layout_width="0dp"
             android:layout_height="55dp"
             android:layout_marginRight="5dp"
             android:src="@drawable/man"
-            app:layout_constraintBottom_toBottomOf="@+id/run"
-            app:layout_constraintEnd_toStartOf="@+id/velo"
+            app:layout_constraintBottom_toBottomOf="@+id/run_img"
+            app:layout_constraintEnd_toStartOf="@+id/velo_img"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toEndOf="@+id/run"
-            app:layout_constraintTop_toTopOf="@+id/run" />
+            app:layout_constraintStart_toEndOf="@+id/run_img"
+            app:layout_constraintTop_toTopOf="@+id/run_img" />
 
         <ImageView
-            android:id="@+id/velo"
+            android:id="@+id/velo_img"
             android:layout_width="0dp"
             android:layout_height="55dp"
             android:src="@drawable/velo"
-            app:layout_constraintBottom_toBottomOf="@+id/run"
-            app:layout_constraintEnd_toStartOf="@+id/hamburger"
+            app:layout_constraintBottom_toBottomOf="@+id/run_img"
+            app:layout_constraintEnd_toStartOf="@+id/hamburger_img"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toEndOf="@+id/run"
-            app:layout_constraintTop_toTopOf="@+id/run" />
+            app:layout_constraintStart_toEndOf="@+id/run_img"
+            app:layout_constraintTop_toTopOf="@+id/run_img" />
 
         <ImageView
-            android:id="@+id/hamburger"
+            android:id="@+id/hamburger_img"
             android:layout_width="0dp"
             android:layout_height="55dp"
             android:paddingRight="30dp"
             android:src="@drawable/hamburger"
-            app:layout_constraintBottom_toBottomOf="@+id/run"
+            app:layout_constraintBottom_toBottomOf="@+id/run_img"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_weight="1.5"
-            app:layout_constraintStart_toEndOf="@+id/run"
-            app:layout_constraintTop_toTopOf="@+id/run" />
+            app:layout_constraintStart_toEndOf="@+id/run_img"
+            app:layout_constraintTop_toTopOf="@+id/run_img" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/wrap_slip"
+        android:id="@+id/slip_container"
         android:layout_width="0dp"
         android:layout_height="@dimen/inner_container_height_last"
         android:layout_marginTop="@dimen/containner_marginTop"
         android:background="@drawable/corner"
         android:padding="@dimen/containner_padding"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/wrap_EXE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/exercise_container"
         tools:context=".MainActivity">
 
 
@@ -243,8 +243,9 @@
             android:layout_height="wrap_content"
             android:text="@string/do_slep"
             android:textColor="@color/black"
-            android:textSize="@dimen/Small_header_text_size"            android:textStyle="bold"
-            app:layout_constraintLeft_toLeftOf="parent"
+            android:textSize="@dimen/Small_header_text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -255,7 +256,7 @@
             android:textColor="@color/black"
             android:textSize="@dimen/Small_header_text_size"
             android:textStyle="bold"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -266,7 +267,7 @@
             android:text="@string/slep_time"
             android:textSize="@dimen/Extra_small_header_text_size"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_sleep" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
