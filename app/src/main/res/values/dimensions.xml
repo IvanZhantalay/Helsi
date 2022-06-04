@@ -20,6 +20,7 @@
     //Container  height
     <dimen name="inner_container_height">125dp</dimen>
     <dimen name="inner_container_height_last">100dp</dimen>
+    <dimen name="corner_radius">20dp</dimen>
 
     //Progress_bar
     <dimen name="round_corner_background">16dp</dimen>
