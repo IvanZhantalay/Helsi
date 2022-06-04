@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/grey_background"
     android:padding="@dimen/main_padding"
-    tools:context=".MainActivity">
+    >
 
     <TextView
         android:id="@+id/maine_title_logo"
@@ -50,7 +50,7 @@
         android:layout_width="0dp"
         android:layout_height="@dimen/inner_container_height"
         android:layout_marginTop="@dimen/containner_marginTop"
-        android:background="@drawable/corner"
+        android:background="@drawable/container_corner"
         android:padding="@dimen/containner_padding"
         app:layout_constraintBottom_toTopOf="@+id/steps_title"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,8 +67,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/steps_value"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/steps_value"
@@ -80,8 +79,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/steps_time"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/steps_title"
-            />
+            app:layout_constraintTop_toBottomOf="@id/steps_title" />
 
         <TextView
             android:id="@+id/steps_goal"
@@ -134,7 +132,7 @@
         android:layout_width="0dp"
         android:layout_height="@dimen/inner_container_height"
         android:layout_marginTop="@dimen/containner_marginTop"
-        android:background="@drawable/corner"
+        android:background="@drawable/container_corner"
         android:padding="@dimen/containner_padding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -234,7 +232,7 @@
         android:layout_width="0dp"
         android:layout_height="@dimen/inner_container_height_last"
         android:layout_marginTop="@dimen/containner_marginTop"
-        android:background="@drawable/corner"
+        android:background="@drawable/container_corner"
         android:padding="@dimen/containner_padding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
