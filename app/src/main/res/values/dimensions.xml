@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     //Text Size
-    <dimen name="Extra_big_header_text_size">40dp</dimen>
-    <dimen name="Big_header_text_size">24dp</dimen>
-    <dimen name="Medium_header_text_size">18dp</dimen>
-    <dimen name="Small_header_text_size">16dp</dimen>
-    <dimen name="Extra_small_header_text_size">12dp</dimen>
+    <dimen name="extra_big_header_text_size">40dp</dimen>
+    <dimen name="big_header_text_size">24dp</dimen>
+    <dimen name="medium_header_text_size">18dp</dimen>
+    <dimen name="small_header_text_size">16dp</dimen>
+    <dimen name="extra_small_header_text_size">12dp</dimen>
 
     //Paddings
     <dimen name="containner_padding">20dp</dimen>
