@@ -48,11 +48,10 @@
         android:id="@+id/steps_containner"
         android:layout_width="0dp"
         android:layout_height="@dimen/inner_container_height"
-        android:layout_marginTop="@dimen/containner_marginTop"
+        android:layout_marginTop="16dp"
         android:background="@drawable/container_corner"
         android:padding="@dimen/containner_padding"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/three_dots_menu">
 
@@ -88,10 +87,10 @@
             android:text="@string/steps_slash"
             android:textColor="@color/black"
             android:textSize="@dimen/small_header_text_size"
-            app:layout_constraintTop_toBottomOf="@+id/steps_title"
             app:layout_constraintBottom_toTopOf="@id/steps_time"
             app:layout_constraintEnd_toStartOf="@id/steps_goal"
-            app:layout_constraintStart_toEndOf="@id/steps_value" />
+            app:layout_constraintStart_toEndOf="@id/steps_value"
+            app:layout_constraintTop_toBottomOf="@+id/steps_title" />
 
         <TextView
             android:id="@+id/steps_goal"
@@ -118,11 +117,21 @@
             android:id="@+id/progress_Bar_Percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/percentage_zero"
+            android:textColor="@color/black"
+            android:textSize="@dimen/extra_small_header_text_size"
+            app:layout_constraintBottom_toTopOf="@id/progress_Bar"
+            app:layout_constraintStart_toStartOf="@id/progress_Bar" />
+
+        <TextView
+            android:id="@+id/progress_Bar_Percent_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="@string/percentage"
             android:textColor="@color/black"
             android:textSize="@dimen/extra_small_header_text_size"
             app:layout_constraintBottom_toTopOf="@id/progress_Bar"
-            app:layout_constraintStart_toStartOf="@id/progress_Bar"
+            app:layout_constraintStart_toEndOf="@id/progress_Bar_Percent"
             app:layout_constraintVertical_bias="0.25" />
 
         <ProgressBar

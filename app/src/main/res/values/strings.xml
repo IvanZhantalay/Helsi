@@ -7,7 +7,8 @@
     <string name="steps_value">34</string>
     <string name="steps_goal">9 000</string>
     <string name="steps_all">All steps, 02:14</string>
-    <string name="percentage">0%</string>
+    <string name="percentage">%</string>
+    <string name="percentage_zero">0</string>
     <string name="exercise">Exercises</string>
     <string name="view_log">View logs</string>
     <string name="do_slep">Did you sleep?</string>
