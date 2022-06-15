@@ -16,6 +16,7 @@
     <dimen name="containner_marginTop">10dp</dimen>
     <dimen name="progress_bar_marginLeft">150dp</dimen>
     <dimen name="text_marginTop">20dp</dimen>
+    <dimen name="steps_slash_marginLeft">5dp</dimen>
 
     //Container  height
     <dimen name="inner_container_height">125dp</dimen>

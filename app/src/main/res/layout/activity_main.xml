@@ -51,10 +51,8 @@
         android:layout_marginTop="@dimen/containner_marginTop"
         android:background="@drawable/container_corner"
         android:padding="@dimen/containner_padding"
-
-        app:layout_constraintBottom_toTopOf="@+id/steps_title"
-
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/three_dots_menu">
 
@@ -83,13 +81,26 @@
             app:layout_constraintTop_toBottomOf="@id/steps_title" />
 
         <TextView
+            android:id="@+id/steps_slash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/steps_slash_marginLeft"
+            android:text="@string/steps_slash"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small_header_text_size"
+            app:layout_constraintTop_toBottomOf="@+id/steps_title"
+            app:layout_constraintBottom_toTopOf="@id/steps_time"
+            app:layout_constraintEnd_toStartOf="@id/steps_goal"
+            app:layout_constraintStart_toEndOf="@id/steps_value" />
+
+        <TextView
             android:id="@+id/steps_goal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/steps_goal"
             android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@id/steps_time"
-            app:layout_constraintLeft_toRightOf="@id/steps_value"
+            app:layout_constraintLeft_toRightOf="@id/steps_slash"
             app:layout_constraintTop_toTopOf="@id/steps_value" />
 
         <TextView

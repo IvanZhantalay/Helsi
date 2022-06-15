@@ -5,7 +5,7 @@
     <string name="connected_to">Синхронизировано с Gear S3 в 01:53</string>
     <string name="steps">Шаги</string>
     <string name="steps_value">34</string>
-    <string name="steps_goal">/9 000</string>
+    <string name="steps_goal">9 000</string>
     <string name="steps_all">Все шаги, 02:14</string>
     <string name="percentage">0%</string>
     <string name="exercise">Упражнения</string>
@@ -13,5 +13,6 @@
     <string name="do_slep">Вы спали?</string>
     <string name="ok">OK</string>
     <string name="slep_time">8 ч. 30 мин. | 02:10 - 10:40</string>
+    <string name="steps_slash" translatable="false">/</string>
 
 </resources>
