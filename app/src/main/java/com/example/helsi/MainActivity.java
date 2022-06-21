@@ -8,13 +8,14 @@ import android.widget.ProgressBar;
 
 public class MainActivity extends AppCompatActivity {
 
-    int stepsCount = 1;
+
     TextView text;
     TextView steps;
     TextView stepsGoal;
     TextView progressPercent;
     ProgressBar stepsProgressBar;
 
+    int stepsCount = 1;
     int goal = 100;
     float percent;
 
@@ -37,18 +38,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
 
             public void onClick(View v) {
-
-                if (stepsCount < goal) {
-
                     stepsCount++;
                     steps.setText(String.valueOf(stepsCount));
 
                     percent = ((float) stepsCount / (float) goal) * 100;
                     progressPercent.setText(String.valueOf((int) percent));
                     stepsProgressBar.setProgress((int) percent);
-                }
-
-
             }
         });
     }
