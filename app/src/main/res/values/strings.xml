@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Helsi</string>
+    <string name="app_details">Details</string>
 
     <string name="big_logo">Samsung Health</string>
     <string name="connected_to">Synchronized with Gear S3 at 01:53</string>
@@ -15,5 +16,6 @@
     <string name="ok">OK</string>
     <string name="slep_time">8 h. 30 min. | 02:10 - 10:40</string>
     <string name="steps_slash" translatable="false">/</string>
+    <string name="detail_text">detail text</string>
 
 </resources>

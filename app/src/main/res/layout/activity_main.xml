@@ -174,8 +174,7 @@
             android:id="@+id/exercise_logs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="4dp"
             android:text="@string/view_log"
             android:textSize="@dimen/small_header_text_size"
             android:textStyle="bold"
@@ -206,6 +205,7 @@
 
         <ImageButton
             android:id="@+id/run_img"
+            android:name = "Бег"
             android:layout_width="0dp"
             android:layout_height="@dimen/exercise_button_height"
             android:background="@drawable/run"
@@ -249,6 +249,7 @@
             app:layout_constraintEnd_toStartOf="@id/guid_left"
             app:layout_constraintStart_toEndOf="@id/velo_img"
             app:layout_constraintTop_toTopOf="@id/velo_img"
+            app:layout_constraintVertical_bias="0.0"
             tools:ignore="SpeakableTextPresentCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -290,11 +291,13 @@
             android:id="@+id/sleep_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
             android:layout_marginTop="@dimen/text_marginTop"
             android:text="@string/slep_time"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/sleep_title" />
+            app:layout_constraintTop_toBottomOf="@id/sleep_title"
+            app:layout_constraintVertical_bias="0.304" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
